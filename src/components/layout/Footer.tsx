@@ -1,33 +1,56 @@
-import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, MapPin, Clock } from 'lucide-react';
-import Logo from './Logo';
+import { Link } from "react-router-dom";
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  Youtube,
+  Mail,
+  Phone,
+  MapPin,
+  Webcam,
+  PhoneCall
+} from "lucide-react";
+import Logo from "./Logo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary-900 text-white">
-      <div className="container-custom pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="text-white bg-primary-900">
+      <div className="py-20 container-custom">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Company Info */}
           <div>
             <div className="mb-4">
               <Logo className="text-white" />
             </div>
             <p className="mb-4 text-sm text-gray-300">
-              Premium coach hire services and tour packages across the UK and Europe. Creating memorable travel experiences since 2010.
+              Premium coach hire services and tour packages across the UK and
+              Europe. Creating memorable travel experiences since 2010.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-accent-500 transition-colors">
+              <a
+                href="#"
+                className="text-gray-300 transition-colors hover:text-accent-500"
+              >
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-accent-500 transition-colors">
+              <a
+                href="#"
+                className="text-gray-300 transition-colors hover:text-accent-500"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-accent-500 transition-colors">
+              <a
+                href="#"
+                className="text-gray-300 transition-colors hover:text-accent-500"
+              >
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-accent-500 transition-colors">
+              <a
+                href="#"
+                className="text-gray-300 transition-colors hover:text-accent-500"
+              >
                 <Youtube size={20} />
               </a>
             </div>
@@ -35,88 +58,176 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-accent-500 transition-colors">Home</Link>
+                <Link
+                  to="/"
+                  className="text-gray-300 transition-colors hover:text-accent-500"
+                >
+                  Home
+                </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-accent-500 transition-colors">About Us</Link>
+                <Link
+                  to="/about"
+                  className="text-gray-300 transition-colors hover:text-accent-500"
+                >
+                  About Us
+                </Link>
               </li>
               <li>
-                <Link to="/coach-hire" className="text-gray-300 hover:text-accent-500 transition-colors">Coach Hire</Link>
+                <Link
+                  to="/coach-hire"
+                  className="text-gray-300 transition-colors hover:text-accent-500"
+                >
+                  Coach Hire
+                </Link>
               </li>
               <li>
-                <Link to="/tours" className="text-gray-300 hover:text-accent-500 transition-colors">Tour Packages</Link>
+                <Link
+                  to="/tours"
+                  className="text-gray-300 transition-colors hover:text-accent-500"
+                >
+                  Tour Packages
+                </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-accent-500 transition-colors">Contact Us</Link>
+                <Link
+                  to="/contact"
+                  className="text-gray-300 transition-colors hover:text-accent-500"
+                >
+                  Contact Us
+                </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-300 hover:text-accent-500 transition-colors">Terms & Conditions</Link>
+                <Link
+                  to="#"
+                  className="text-gray-300 transition-colors hover:text-accent-500"
+                >
+                  Terms & Conditions
+                </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-300 hover:text-accent-500 transition-colors">Privacy Policy</Link>
+                <Link
+                  to="#"
+                  className="text-gray-300 transition-colors hover:text-accent-500"
+                >
+                  Privacy Policy
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Popular Tours */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Popular Tours</h3>
+            <h3 className="mb-4 text-lg font-semibold">Popular Tours</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/tours/1" className="text-gray-300 hover:text-accent-500 transition-colors">Scotland Highlands</Link>
+                <Link
+                  to="/tours/1"
+                  className="text-gray-300 transition-colors hover:text-accent-500"
+                >
+                  Scotland Highlands
+                </Link>
               </li>
               <li>
-                <Link to="/tours/2" className="text-gray-300 hover:text-accent-500 transition-colors">Lake District Adventure</Link>
+                <Link
+                  to="/tours/2"
+                  className="text-gray-300 transition-colors hover:text-accent-500"
+                >
+                  Lake District Adventure
+                </Link>
               </li>
               <li>
-                <Link to="/tours/3" className="text-gray-300 hover:text-accent-500 transition-colors">Paris Weekend Getaway</Link>
+                <Link
+                  to="/tours/3"
+                  className="text-gray-300 transition-colors hover:text-accent-500"
+                >
+                  Paris Weekend Getaway
+                </Link>
               </li>
               <li>
-                <Link to="/tours/4" className="text-gray-300 hover:text-accent-500 transition-colors">Amsterdam City Break</Link>
+                <Link
+                  to="/tours/4"
+                  className="text-gray-300 transition-colors hover:text-accent-500"
+                >
+                  Amsterdam City Break
+                </Link>
               </li>
               <li>
-                <Link to="/tours/5" className="text-gray-300 hover:text-accent-500 transition-colors">Cornwall Coastal Tour</Link>
+                <Link
+                  to="/tours/5"
+                  className="text-gray-300 transition-colors hover:text-accent-500"
+                >
+                  Cornwall Coastal Tour
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex">
-                <MapPin className="h-5 w-5 mr-2 text-accent-500" />
-                <span className="text-gray-300">123 Travel Street, London, UK</span>
+            <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
+            <ul className="space-y-4">
+              <li className="flex items-center gap-2">
+                <MapPin className="w-5 h-5 mr-2 text-accent-500" />
+                <span className="text-gray-300">
+                  468 Katherine Road , London , E7 8EP
+                </span>
               </li>
-              <li className="flex">
-                <Phone className="h-5 w-5 mr-2 text-accent-500" />
-                <a href="tel:+441234567890" className="text-gray-300 hover:text-accent-500 transition-colors">+44 123 456 7890</a>
+              <li className="flex items-center gap-2">
+                <PhoneCall className="w-5 h-5 mr-2 text-lime-500" />
+                <a
+                  href="whatsApp:+441234567890"
+                  className="text-gray-300 transition-colors hover:text-accent-500"
+                >
+                  +44 7445 248478
+                </a>
               </li>
-              <li className="flex">
-                <Mail className="h-5 w-5 mr-2 text-accent-500" />
-                <a href="mailto:info@amirexpress.com" className="text-gray-300 hover:text-accent-500 transition-colors">info@amirexpress.com</a>
+              <li className="flex items-center gap-2">
+                <Phone className="w-5 h-5 mr-2 text-accent-500" />
+                <a
+                  href="tel:+441234567890"
+                  className="text-gray-300 transition-colors hover:text-accent-500"
+                >
+                  01245561488
+                </a>
               </li>
-              <li className="flex">
-                <Clock className="h-5 w-5 mr-2 text-accent-500" />
-                <span className="text-gray-300">Mon-Fri: 9:00 AM - 6:00 PM</span>
+              <li className="flex items-center gap-2">
+                <Mail className="w-5 h-5 mr-2 text-accent-500" />
+                <a
+                  href="mailto:info@amirexpress.com"
+                  className="text-gray-300 transition-colors hover:text-accent-500"
+                >
+                  info@amirexpress.com
+                </a>
               </li>
+              <li className="flex items-center gap-2">
+                <Webcam className="w-5 h-5 mr-2 text-accent-500" />
+                <a
+                  target="_blank"
+                  href="http://amirexpress.uk"
+                  className="text-gray-300 transition-colors hover:text-accent-500"
+                >
+                  amirexpress.uk
+                </a>
+              </li>
+              
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-10 pt-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="pt-6 mt-10 border-t border-gray-700">
+          <div className="flex flex-col items-center justify-between md:flex-row">
             <p className="text-sm text-gray-400">
               © {currentYear} AmirExpress. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0">
-              <img 
-                src="https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                alt="Payment methods" 
-                className="h-8" 
+              <img
+                src="https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Payment methods"
+                className="h-8"
               />
             </div>
           </div>

@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
-import { Menu, X, Bus, MapPin } from 'lucide-react';
-import Logo from './Logo';
+import { useState, useEffect } from "react";
+import { NavLink, Link, useLocation } from "react-router-dom";
+import { Menu, X, Bus, MapPin } from "lucide-react";
+import Logo from "./Logo";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,9 +21,9 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -32,22 +32,26 @@ const Navbar = () => {
   }, [location]);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Coach Hire', path: '/coach-hire' },
-    { name: 'Tour Packages', path: '/tours' },
-    { name: 'Contact', path: '/contact' }
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Coach Hire", path: "/coach-hire" },
+    { name: "Tour Packages", path: "/tours" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
-    <nav 
+    <nav
       className={`fixed top-0 py-3.5 w-full z-50 transition-all duration-300 backdrop-blur-3xl`}
     >
       <div className="container-custom">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <Logo className={`h-10 w-auto ${isScrolled ? 'text-primary-900' : 'text-neutral'}`} />
+            <Logo
+              className={`h-10 w-auto ${
+                isScrolled ? "text-primary-900" : "text-neutral"
+              }`}
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -59,10 +63,10 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive
-                      ? 'text-accent-600'
+                      ? "text-accent-600"
                       : isScrolled
-                      ? 'text-primary-900 hover:text-primary-700'
-                      : 'text-neutral hover:text-accent-300'
+                      ? "text-primary-900 hover:text-primary-700"
+                      : "text-neutral hover:text-accent-300"
                   }`
                 }
               >
@@ -71,17 +75,14 @@ const Navbar = () => {
             ))}
             <div className="flex items-center ml-4 space-x-2">
               <a
-                href="tel:+441234567890"
+                href="tel:+44 7445 248478"
                 className={`text-sm font-medium ${
-                  isScrolled ? 'text-primary-900' : 'text-neutral'
+                  isScrolled ? "text-primary-900" : "text-neutral"
                 }`}
               >
-                +44 123 456 7890
+                +44 7445 248478
               </a>
-              <a 
-                href="/contact" 
-                className="btn btn-accent"
-              >
+              <a href="/contact" className="btn btn-accent">
                 Book Now
               </a>
             </div>
@@ -92,7 +93,7 @@ const Navbar = () => {
             <button
               onClick={toggleMenu}
               className={`p-2 rounded-md focus:outline-none ${
-                isScrolled ? 'text-primary-900' : 'text-neutral'
+                isScrolled ? "text-primary-900" : "text-neutral"
               }`}
             >
               {isMenuOpen ? (
@@ -116,8 +117,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `block px-3 py-2 rounded-md text-base font-medium ${
                     isActive
-                      ? 'bg-primary-50 text-primary-700'
-                      : 'text-primary-900 hover:bg-primary-50'
+                      ? "bg-primary-50 text-primary-700"
+                      : "text-primary-900 hover:bg-primary-50"
                   }`
                 }
               >

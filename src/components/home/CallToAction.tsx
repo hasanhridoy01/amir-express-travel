@@ -38,8 +38,8 @@ const CallToAction = () => {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-primary-900">Call us at</p>
-                  <a href="tel:+441234567890" className="text-lg font-bold text-primary-900">
-                    +44 123 456 7890
+                  <a href="tel:+44 7445 248478" className="text-lg font-bold text-primary-900">
+                    +44 7445 248478
                   </a>
                 </div>
               </div>

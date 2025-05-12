@@ -32,7 +32,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative h-auto pb-20 md:pb-5 md:h-screen">
+    <section className="relative h-auto pb-20 container-custom md:pb-5 md:h-screen">
       {/* Background Images */}
       {backgrounds.map((bg, index) => (
         <div
@@ -49,7 +49,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative flex items-center h-full">
-        <div className="pt-20 container-custom">
+        <div className="pt-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -101,7 +101,7 @@ const Hero = () => {
       </div>
 
       {/* Indicators */}
-      <div className="absolute left-0 right-0 flex justify-center bottom-8">
+      <div className="absolute left-0 right-0 flex justify-center bottom-9">
         <div className="flex space-x-2">
           {backgrounds.map((_, index) => (
             <button
