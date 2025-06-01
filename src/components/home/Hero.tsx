@@ -32,7 +32,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative h-auto pb-20 container-custom md:pb-5 md:h-screen">
+    <section className="relative w-full h-auto px-5 pb-20 mx-auto sm:px-6 lg:px-10 md:pb-5 md:h-screen">
       {/* Background Images */}
       {backgrounds.map((bg, index) => (
         <div

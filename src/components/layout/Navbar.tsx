@@ -73,7 +73,7 @@ const Navbar = () => {
                 {link.name}
               </NavLink>
             ))}
-            <div className="flex items-center ml-4 space-x-2">
+            <div className="flex items-center ml-4 space-x-3">
               <a
                 href="tel:+44 7445 248478"
                 className={`text-sm font-medium ${
