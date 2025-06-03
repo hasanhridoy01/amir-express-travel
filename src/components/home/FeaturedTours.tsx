@@ -39,12 +39,11 @@ const FeaturedTours = () => {
     },
   };
 
-  // Filter only featured tours
-  const featuredTours = tours.filter(tour => tour.featured);
+  const featuredTours = tours.filter((tour) => tour);
 
   return (
     <section className="section bg-neutral-50">
-      <div className="">
+      <div className="container px-4 mx-auto">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl text-primary-900">
             Popular Tour Packages
@@ -62,36 +61,40 @@ const FeaturedTours = () => {
           className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
           {featuredTours.map((tour) => (
-            <motion.div key={tour.id} variants={itemVariants} className="card group">
-              <div className="relative overflow-hidden h-60">
-                <img 
-                  src={tour.image} 
-                  alt={tour.title} 
+            <motion.div key={tour.id} variants={itemVariants} className="bg-white rounded-lg shadow group">
+              <div className="relative overflow-hidden rounded-t-lg h-60">
+                <img
+                  src={tour.image}
+                  alt={tour.title}
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute px-3 py-1 text-sm font-semibold rounded-full top-4 right-4 bg-accent-500 text-primary-900">
                   £{tour.price}
                 </div>
               </div>
+
               <div className="p-6">
-                <div className="flex items-center mb-2 text-sm text-gray-500">
-                  <MapPin className="w-4 h-4 mr-1 text-primary-500" />
-                  <span>{tour.location}, {tour.country}</span>
-                  <span className="mx-2">•</span>
-                  <Clock className="w-4 h-4 mr-1 text-primary-500" />
+                <div className="flex flex-wrap items-center mb-2 text-sm text-gray-500 gap-x-2">
+                  {/* <MapPin className="w-4 h-4 text-primary-500" /> */}
+                  {/* <span>{tour.location}, {tour.country}</span> */}
+                  <span className="mx-1">•</span>
+                  <Clock className="w-4 h-4 text-primary-500" />
                   <span>{tour.duration}</span>
                 </div>
+
                 <h3 className="mb-2 text-xl font-bold text-primary-900 group-hover:text-primary-600">
                   {tour.title}
                 </h3>
+
                 <p className="mb-4 text-gray-600 line-clamp-2">
                   {tour.subtitle}
                 </p>
+
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
-                    <Star className="w-5 h-5 fill-current text-accent-500" />
-                    <span className="ml-1 font-medium">{tour.rating}</span>
-                    <span className="ml-1 text-sm text-gray-500">({tour.reviews} reviews)</span>
+                    {/* <Star className="w-5 h-5 fill-current text-accent-500" /> */}
+                    {/* <span className="ml-1 font-medium">{tour.rating}</span>
+                    <span className="ml-1 text-sm text-gray-500">({tour.reviews} reviews)</span> */}
                   </div>
                   <Link
                     to={`/tours/${tour.id}`}
@@ -107,9 +110,9 @@ const FeaturedTours = () => {
         </motion.div>
 
         <div className="mt-12 text-center">
-          <Link to="/tours" className="btn btn-primary">
+          <Link to="/tours" className="inline-flex items-center gap-2 btn btn-primary">
             View All Tours
-            <ChevronRight className="w-5 h-5 ml-2" />
+            <ChevronRight className="w-5 h-5" />
           </Link>
         </div>
       </div>
